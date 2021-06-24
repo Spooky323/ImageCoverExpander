@@ -116,7 +116,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArtworkViewController.cs" />
+    <Compile Include="ArtworkViewManager.cs" />
     <Compile Include="Installers\MenuInstaller.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Configuration\PluginConfig.cs" />
