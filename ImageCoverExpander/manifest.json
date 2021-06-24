@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
   "id": "ImageCoverExpander",
   "name": "ImageCoverExpander",
-  "author": "",
-  "version": "0.0.1",
+  "author": "Spooky",
+  "version": "1.9.93",
   "description": "",
-  "gameVersion": "1.11.1",
+  "gameVersion": "1.16.2",
   "dependsOn": {
     "BSIPA": "^4.0.5"
   },
