@@ -1,8 +1,8 @@
 ﻿using System;
 using Zenject;
-using Reflection = BS_Utils.Utilities.ReflectionUtil;
 using HMUI;
 using UnityEngine;
+using IPA.Utilities;
 
 namespace ImageCoverExpander
 {
@@ -10,9 +10,9 @@ namespace ImageCoverExpander
     {
         private StandardLevelDetailViewController _standardLevelViewController;
 
-        private static Vector3 modifiedScale = new Vector3(5.2f, 4.1f, 0f);
-        private static Vector3 modifiedPositon = new Vector3(-35f, -56f, 0f);
-        private static float modifiedSkew = 0;
+        private static readonly Vector3 modifiedScale = new Vector3(5.2f, 4.1f, 0f);
+        private static readonly Vector3 modifiedPositon = new Vector3(-35f, -56f, 0f);
+        private static readonly float modifiedSkew = 0;
 
         public ArtworkViewManager(StandardLevelDetailViewController standardLevelDetailViewController)
         {
@@ -21,26 +21,27 @@ namespace ImageCoverExpander
 
         public void Initialize()
         {
-            var levelview = Reflection.GetPrivateField<StandardLevelDetailView>(_standardLevelViewController, "_standardLevelDetailView");
-            var levelbar = Reflection.GetPrivateField<LevelBar>(levelview, "_levelBar");
+            var levelbar = _standardLevelViewController.transform.Find("LevelDetail").Find("LevelBarBig");
             ArtworkModification(levelbar);
         }
 
-        private void ArtworkModification(LevelBar instance)
+        private void ArtworkModification(Transform levelBarTranform)
         {
-            if (!instance) { return; }
-            Plugin.Log.Notice("Changing artwork for " + instance.name);
+            if (!levelBarTranform) { return; }
+            Plugin.Log.Notice("Changing artwork for " + levelBarTranform.name);
             try
             {
-                var image = Reflection.GetPrivateField<ImageView>(instance, "_songArtworkImageView");
-                image.GetComponent<RectTransform>().localScale = modifiedScale;
-                image.GetComponent<RectTransform>().localPosition = modifiedPositon;
-                image.color = new Color(1, 1, 1, 0.5f);
-                Reflection.SetPrivateField(image, "_skew", modifiedSkew);
+                var imageTransform = levelBarTranform.Find("SongArtwork");
+                imageTransform.localScale = modifiedScale;
+                imageTransform.localPosition = modifiedPositon;
+                imageTransform.SetAsFirstSibling();
+                var imageView = imageTransform.GetComponent<ImageView>();
+                imageView.color = new Color(0.5f, 0.5f, 0.5f, 1);
+                FieldAccessor<ImageView, float>.Set(ref imageView, "_skew", modifiedSkew);
             }
             catch (Exception e)
             {
-                Plugin.Log.Error("Error changing artwork fields for " + instance.name);
+                Plugin.Log.Error("Error changing artwork fields for " + levelBarTranform.name);
                 Plugin.Log.Error(e);
             }
         }
