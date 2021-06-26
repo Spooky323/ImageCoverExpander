@@ -2,7 +2,7 @@
 
 namespace ImageCoverExpander
 {
-    class MenuInstaller : Installer
+    public class MenuInstaller : Installer
     {
         public override void InstallBindings()
         {

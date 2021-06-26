@@ -1,3 +1,0 @@
-﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
-	<image src='ImageCoverExpander.UI.BackgroundMask.png' size-delta-x='72.5' size-delta-y='58.2' anchor-pos-x='1.5' anchor-pos-y='0.3'/>
-</bg>
