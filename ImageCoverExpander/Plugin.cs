@@ -1,14 +1,5 @@
 ﻿using IPA;
-using IPA.Config;
-using IPA.Config.Stores;
-using System;
-using UnityEngine;
 using IPALogger = IPA.Logging.Logger;
-using BSEvents = BS_Utils.Utilities.BSEvents;
-using Reflection = BS_Utils.Utilities.ReflectionUtil;
-using HMUI;
-using BeatSaberMarkupLanguage;
-using System.Reflection;
 using SiraUtil.Zenject;
 
 namespace ImageCoverExpander
