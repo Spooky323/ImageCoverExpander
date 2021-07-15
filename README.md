@@ -7,7 +7,7 @@ Beat Saber mod that expands the artwork cover of a song
 ## Installation
 
 1. Download and Install the required dependencies listed down below.
-2. Download the latest ImageCoverExpander version here -> https://github.com/Spooky323/ImageCoverExpander/releases/tag/1.1.97
+2. Download the latest ImageCoverExpander version here -> https://github.com/Spooky323/ImageCoverExpander/releases
 3. Drag & Drop the .DLL file to your plugins folder
 
 ## Dependencies
