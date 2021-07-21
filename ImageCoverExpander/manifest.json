@@ -3,9 +3,9 @@
     "id": "ImageCoverExpander",
     "name": "ImageCoverExpander",
     "author": "Spooky",
-    "version": "2.1.1",
+    "version": "2.2.1",
     "description": "",
-    "gameVersion": "1.16.2",
+    "gameVersion": "1.16.3",
     "dependsOn": {
         "BSIPA": "^4.1.6",
         "SiraUtil": "^2.5.5",
