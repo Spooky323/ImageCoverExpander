@@ -13,7 +13,7 @@ namespace ImageCoverExpander
         private MainMenuViewController _mainMenuViewController;
 
         private static readonly Vector3 modifiedSizeDelta = new Vector2(70.5f, 58);
-        private static readonly Vector3 modifiedPositon = new Vector3(-34.2f, -56f, 0f);
+        private static readonly Vector3 modifiedPositon = new Vector3(-35.0f, -56f, 0f);
         private static readonly float modifiedSkew = 0;
 
         public ArtworkViewManager(StandardLevelDetailViewController standardLevelDetailViewController, MainMenuViewController mainMenuViewController)
