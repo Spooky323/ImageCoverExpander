@@ -114,7 +114,6 @@
     <Compile Include="ArtworkViewManager.cs" />
     <Compile Include="Installers\MenuInstaller.cs" />
     <Compile Include="Plugin.cs" />
-    <Compile Include="Configuration\PluginConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
