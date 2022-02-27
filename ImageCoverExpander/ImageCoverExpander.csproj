@@ -112,7 +112,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArtworkViewManager.cs" />
-    <Compile Include="Installers\MenuInstaller.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
