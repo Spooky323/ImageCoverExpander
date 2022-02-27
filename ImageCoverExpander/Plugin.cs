@@ -24,7 +24,7 @@ namespace ImageCoverExpander
             Instance = this;
             Log = logger;
             Log.Info("ImageCoverExpander initialized.");
-            zenjector.OnMenu<MenuInstaller>();
+            zenjector.Install(Location.Menu, Container => Container.BindInterfacesTo<ArtworkViewManager>().AsSingle());
         }
 
         #region BSIPA Config

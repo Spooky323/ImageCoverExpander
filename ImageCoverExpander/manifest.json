@@ -3,12 +3,12 @@
     "id": "ImageCoverExpander",
     "name": "ImageCoverExpander",
     "author": "Spooky",
-    "version": "2.3.3",
+    "version": "2.3.4",
     "description": "",
-    "gameVersion": "1.17.0",
+    "gameVersion": "1.19.0",
     "dependsOn": {
-        "BSIPA": "^4.2.0",
-        "SiraUtil": "^2.5.8",
-        "BeatSaberMarkupLanguage": "^1.5.5"
+        "BSIPA": "^4.2.1",
+        "SiraUtil": "^3.0.3",
+        "BeatSaberMarkupLanguage": "^1.6.1"
     }
 }
